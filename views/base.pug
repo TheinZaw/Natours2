@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    title Natours | #{title}
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")      
+    meta(http-equiv='Content-Type', content='text/html;charset=UTF-8')
+    //- meta(http-equiv="Cache-Control", content="no-cache"); response.header should use
+    //- meta(http-equiv="Pragma", content="no-cache");
+    //- meta(http-equiv="Expires", content="0");
+
+    //- meta(http-equiv="Content-Security-Policy", content="style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;")
+    //- meta(http-equiv="Content-Security-Policy", content="script-src 'self' data: gap: 'unsafe-inline' 'unsafe-hashes' 'unsafe-eval' https://cdnjs.cloudflare.com https://code.jquery.com;")
+    //- meta(http-equiv="Content-Security-Policy", content="script-src 'unsafe-inline' 'sha256-qdkNqe85WWr6+7ihjEHCpuuThRztro2fFFn5YubFP+8='")
+    block head
+      
+      link(rel="shortcut icon", href="/favicon.ico", type="image/ico")
+      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:300,300i,700")
+      link(rel="stylesheet", href="/css/style.css")
+      script(src="https://code.jquery.com/jquery-1.9.1.min.js" type="script")
+      script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+      title Natours | #{title}
+      
+      //- style.
+      //-   .heading {
+      //-     margin: 1rem ;
+      //-     text-align: center;
+      //-     color:green;
+      //-   }
+      //-   ul,dl{
+      //-     margin:1rem;
+      //-     padding :1.3rem;
+      //-     border:2px solid red;
+      //-   }
+      //-   #first{
+      //-     background-color:#00dd33;
+      //-   }
+      //-   #second{
+      //-     background-color:#3355dd;
+      //-   }
+  body
+    // Header
+    include _header
+    // CONTENT
+    block content
+      h1 this is place holder
+    //FOOTER
+    block footer
+      include _footer
+      script(src='/js/bundle.js')
+      
+     
+    
+

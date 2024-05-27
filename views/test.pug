@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    //- meta(http-equiv="Content-Security-Policy", content="style-src 'unsafe-inline' 'sha256-k5Sm0Uc88boL67qL6G3a0twDD0CeRDJkXviPQPzRofY='")
+    //- meta(http-equiv="Content-Security-Policy", content="script-src 'unsafe-inline' 'sha256-k5Sm0Uc88boL67qL6G3a0twDD0CeRDJkXviPQPzRofY='")
+    //- meta(http-equiv="Content-Security-Policy", content="script-src 'unsafe-inline' 'sha256-7Ci6dTjFrItEINPYd32KbReCOQ0MDkF6pAYuYaalDBo='")
+    
+    //- meta(http-equiv="Content-Security-Policy", content="script-src-attr 'none' 'unsafe-inline' 'sha256-k5Sm0Uc88boL67qL6G3a0twDD0CeRDJkXviPQPzRofY=';")
+    //- meta(http-equiv="Content-Security-Policy", content="script-src-elem 'sha256-k5Sm0Uc88boL67qL6G3a0twDD0CeRDJkXviPQPzRofY='")
+    meta(http-equiv="Cache-Control", content="max-age=31536000, immutable")
+    title Event handler Attribute #{title}
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    |
+    style.
+      body {
+        text-align: center;
+      }
+      h2 {
+        color: green;
+      }
+      #container {
+        cursor: pointer;
+      }
+    |
+    script.
+      const toggleColor = (v1) => {
+        console.log(v1 + 'asdasda');
+        const element = document.getElementById("container");
+        const currentColor = element.style.color;
+        if (currentColor === "red") {
+          element.style.color = "green";
+        } else {
+          element.style.color = "red";
+        }
+      };
+  body
+    h2 Welcome to GeeksforGeeks
+    //-  Event handler attribute
+    #container(onclick="toggleColor('aa')")
+      | Click to toggle the text color
